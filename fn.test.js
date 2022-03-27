@@ -1,5 +1,9 @@
 const fn = require('./fn');
 
-test('이거 에러 나나요?', () => {
-  expect(() => fn.throwErr()).toThrow('xx');
+// resolves, rejects
+test('3초 후 나이 30', async () => {
+  // return fn.getAge().then((age) => {
+  //   expect(age).toBe(30);
+  // });
+  await expect(fn.getAge()).resolves.toBe(30);
 });
